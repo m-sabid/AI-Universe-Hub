@@ -2,9 +2,7 @@ fetch("https://openapi.programming-hero.com/api/ai/tools")
   .then((res) => res.json())
   .then((data) => displayAiCard(data.data.tools));
 
-//   Remove All Data Filter
-document.getElementById("sort-by-date-all").style.display = "none";
-document.getElementById("sort-by-date-btn").style.display = "block";
+
 
 function displayAiCard(tools) {
   const firstSix = tools.slice(0, 6);
