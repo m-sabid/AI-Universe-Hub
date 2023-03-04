@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Nav bar -->
+    <nav class="mx-auto text-center">
+        <h1 class="text-4xl font-bold text-center my-5">AI Universe Hub</h1>
+        <button class="bg-[#EB5757] text-white text-lg p-2 rounded mx-auto font-semibold" id="sort-by-date-btn">Short By
+            Date</button>
+        <button class="bg-[#EB5757] text-white text-lg p-2 rounded mx-auto font-semibold" id="sort-by-date-all">Short By
+            Date</button>
+    </nav>
+
+    <!-- Card Section -->
+    <div class="container mx-auto">
+        <!-- cards -->
+        <div id="cards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center my-10"></div>
+        <div class="flex my-5">
+            <button class="bg-[#EB5757] text-white text-lg p-2 rounded mx-auto font-semibold" id="show-more">Show more</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="fixed z-10 inset-0 overflow-y-auto hidden" id="modal">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-90 min-w-[80%]"
+                role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+
+                    <div class="flex flex-col gap-4 justify-center items-center md:flex-row">
+                        <div
+                            class="bg-[#FEF7F7] w-full md:w-1/2 p-4 border border-red-300 hover:border-red-100 rounded-lg min-h-[500px]">
+                            <!-- Left column content -->
+                            <h1 class="text-2xl font-bold" id="modal-description"></h1>
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center my-10">
+                                <div class="bg-white p-5 rounded-xl">
+                                    <h5 id="pricing-1" class="text-[#03A30A] font-semibold">
+                                        $10/month Basic
+                                    </h5>
+                                </div>
+                                <div class="bg-white p-5 rounded-xl">
+                                    <h5 id="pricing-2" class="text-[#03A30A] font-semibold">
+                                        $50/month Pro
+                                    </h5>
+                                </div>
+                                <div class="bg-white p-5 rounded-xl">
+                                    <h5 id="pricing-3" class="text-[#03A30A] font-semibold">
+                                        Contact us Enterprise
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 items-center my-10">
+
+                                <div>
+                                    <h5 class="font-bold font-xl">Features</h5>
+                                    <ul class="list-disc ml-10">
+                                        <li id="modal-feature-1"></li>
+                                        <li id="modal-feature-2"></li>
+                                        <li id="modal-feature-3"></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold font-xl">Integrations</h5>
+                                    <ul class="list-disc ml-10">
+                                        <li id="modal-integrations-1"></li>
+                                        <li id="modal-integrations-2"></li>
+                                        <li id="modal-integrations-3"></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div
+                            class="w-full md:w-1/2 p-4 border border-red-100 hover:border-red-300 rounded-lg min-h-[500px]">
+                            <!-- Right column content -->
+                            <div class="flex flex-col items-center">
+
+                                <div class="relative">
+                                    <img src="" alt="" id="modal-image" class="w-full">
+                                    <div class="absolute top-0 right-0 mt-4 mr-3">
+                                        <h1 class="text-white font-bold bg-[#EE503F] px-2 py-1 rounded-lg" id="modal-accuracy"></h1>
+                                    </div>
+                                </div>
+                                <h5 class="text-2xl" id="modal-input-examples"></h5>
+                                <p class="text-gray-500" id="modal-output-examples"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+                        id="close-modal">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/index.js"></script>
+    <script src="./js/showmore.js"></script>
+    <script src="./js/shortByDate.js"></script>
+
+</body>
+
+</html>
