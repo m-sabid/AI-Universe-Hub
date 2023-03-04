@@ -151,7 +151,4 @@ function openModal(id) {
   modal.classList.remove("hidden");
 }
 
-// Modal close button
-closeModalButton.onclick = function () {
-  modal.classList.add("hidden");
-};
+
